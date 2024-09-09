@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1>Class Monitor Vote</h1>
+        </div>
+
+        <div class="text-center mt-3">
+            <h5>Total Votes: 0</h5>
+        </div>
+
+        <form id="voteForm" onsubmit="handleEvent(event)" class="mt-4">
+            <div class="form-group">
+                <label for="username">Student Name:</label>
+                <input type="text" id="username" name="username" class="form-control" />
+            </div>
+            
+            <div class="form-group">
+                <label for="monitor" class="form-label">Choose Monitor:</label>
+                <select id="monitor" name="monitor" class="form-control">
+                    <option value="Suresh">Suresh</option>
+                    <option value="Deepank">Deepank</option>
+                    <option value="Abhik">Abhik</option>
+                </select>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Vote</button>
+            </div>
+        </form>
+
+        <div class="candidates-list mt-4">
+            <div class="candidate-item" id="Suresh">
+                <h3>Suresh</h3>
+                <span>Total: 0</span>
+                <ul class="votes-list list-group mt-2"></ul>
+            </div>
+            <div class="candidate-item" id="Deepank">
+                <h3>Deepank</h3>
+                <span>Total: 0</span>
+                <ul class="votes-list list-group mt-2"></ul>
+            </div>
+            <div class="candidate-item" id="Abhik">
+                <h3>Abhik</h3>
+                <span>Total: 0</span>
+                <ul class="votes-list list-group mt-2"></ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
